@@ -1,12 +1,14 @@
-import {Fragment} from 'react';
 
 function App() {
+  const name = "react";
+  //const, let: 블록 단위 scope
+  //var: 함수 단위의 scope
+  
   return (
-    <Fragment>
-      Hello <b>react!</b>
-      <h2>부모태그</h2>
-      <p>Fragment 사용하기</p>
-    </Fragment>
+    <>
+      <h1>Hello {name}</h1>
+      <p>jsx 내부에서 자바스크립트 표현식 사용하기</p>
+    </>
   );
 }
 
