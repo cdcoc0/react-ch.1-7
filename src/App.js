@@ -1,12 +1,12 @@
 
 function App() {
-  const name = "react";
+  const name = "reac";
   //const, let: 블록 단위 scope
   //var: 함수 단위의 scope
-  
+
   return (
     <>
-      <h1>Hello {name}</h1>
+      {name === "react" ? (<h1>hello react!😉</h1>) : (<h1>not react🙄</h1>)}
       <p>jsx 내부에서 자바스크립트 표현식 사용하기</p>
     </>
   );
