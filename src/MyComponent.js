@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MyComponent = () => {
+const MyComponent = props => {
     return (
-        <div>new component added</div>
+        <div>My name is {props.name}😀</div>
     );
-}
+};
 
 export default MyComponent;
