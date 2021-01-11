@@ -1,10 +1,11 @@
 import React from 'react';
 
-const MyComponent = props => {
+const MyComponent = ({name, children}) => {
+    //const {name, children} = props;
     return (
         <div>
-            My name is {props.name}😀 <br />
-            children: {props.children}
+            My name is {name}😀 <br />
+            children: {children}
         </div>
     );
 };
