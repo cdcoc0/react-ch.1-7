@@ -6,4 +6,8 @@ const MyComponent = props => {
     );
 };
 
+MyComponent.defaultProps = {
+    name: 'default'
+};
+
 export default MyComponent;
