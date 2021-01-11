@@ -6,7 +6,7 @@ import MyComponent from './MyComponent';
 const App = () => {
   return (
     <div>
-      <MyComponent>리액트</MyComponent>
+      <MyComponent name="React" favoriteNumber={1}>리액트</MyComponent>
     </div>
   );
 };
