@@ -1,13 +1,14 @@
+import React, {Component} from "react";
 import './App.css';
 
-function App() {
-  const name = "react😉";
+class App extends Component {
+  render() {
+    const name = 'react😊';
 
-  return (
-    <div className="react">
-      {name}
-    </div>
-  );
+    return (
+      <div className="react">{name}</div>
+    );
+  }
 }
 
 export default App;
