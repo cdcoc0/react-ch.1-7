@@ -16,6 +16,7 @@ class MyComponent extends Component {
             <div>Hey {name}😁! <br />
             There is a {favoriteNumber}-dollar bill right in front of you! <br />
             children: {children}
+            <hr></hr>
             </div>
         );
     }
