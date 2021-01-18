@@ -2,6 +2,14 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class MyComponent extends Component {
+    static defaultProps = {
+        name: 'default name'
+    };
+
+    static propTypes = {
+        name: PropTypes.string,
+        favoriteNumber: PropTypes.number.isRequired
+    }
     render() {
         const {name, favoriteNumber, children} = this.props;
         return (
@@ -13,14 +21,14 @@ class MyComponent extends Component {
     }
 }
 
-MyComponent.defaultProps = {
-    name: 'default name'
-};
+// MyComponent.defaultProps = {
+//     name: 'default name'
+// };
 
-MyComponent.propTypes = {
-    name: PropTypes.string,
-    favoriteNumber: PropTypes.number.isRequired
-}
+// MyComponent.propTypes = {
+//     name: PropTypes.string,
+//     favoriteNumber: PropTypes.number.isRequired
+// }
 
 export default MyComponent;
 
