@@ -51,6 +51,7 @@ class Counter extends Component {
                     });
                 }}
                 >+1</button>
+                <hr></hr>
             </div>
         );
     }
