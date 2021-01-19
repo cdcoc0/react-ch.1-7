@@ -23,8 +23,17 @@ class Counter extends Component {
                 <h2>바뀌지 않는 값: {fixedNumber}</h2>
                 <button
                 //onClick 함수 지정
+                // onClick={() => {
+                //     this.setState({number: number + 1});
+                // }}
+
+                //객체 대신 함수 인자 전달
                 onClick={() => {
-                    this.setState({number: number + 1});
+                    this.setState(prevState => {
+                        return {
+                            number: prevState.number + 1
+                        };
+                    });
                 }}
                 >+1</button>
             </div>
