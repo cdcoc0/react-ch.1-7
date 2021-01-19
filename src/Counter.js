@@ -28,16 +28,26 @@ class Counter extends Component {
                 // }}
 
                 //객체 대신 함수 인자 전달
+                // onClick={() => {
+                //     this.setState(prevState => {
+                //         return {
+                //             number: prevState.number + 1
+                //         };
+                //     });
+                //     this.setState(prevState => {
+                //         return {
+                //             number: prevState.number + 1
+                //         };
+                //     });
+                // }}
+
+                //this.setState가 끝난 후 특정 작업 실행
                 onClick={() => {
-                    this.setState(prevState => {
-                        return {
-                            number: prevState.number + 1
-                        };
-                    });
-                    this.setState(prevState => {
-                        return {
-                            number: prevState.number + 1
-                        };
+                    this.setState({
+                        number: number + 1
+                    }, () => {
+                        console.log('setState가 호출됨');
+                        console.log(this.state);
                     });
                 }}
                 >+1</button>
