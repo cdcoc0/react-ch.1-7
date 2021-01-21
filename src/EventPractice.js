@@ -2,14 +2,31 @@ import React, {useState} from 'react';
 
 
 const EventPractice = () => {
-    const [username, setUsername] = useState('');
-    const [message, setMessage] = useState('');
-    const onChangeUsername = e => setUsername(e.target.value);
-    const onChangeMessage = e => setMessage(e.target.value);
+    // const [username, setUsername] = useState('');
+    // const [message, setMessage] = useState('');
+    // const onChangeUsername = e => setUsername(e.target.value);
+    // const onChangeMessage = e => setMessage(e.target.value);
+    const [form, setForm] = useState({
+        username: '',
+        message: ''
+    });
+    const {username, message} = form;
+    const onChange = e => {
+        const nextForm = {
+            ...form, //기존의 form 내용 복사
+            [e.target.name]: e.target.value //복사한 form의 값 변경
+        };
+        setForm(nextForm);
+    };
+
     const onClick = () => {
         alert(username + ': ' + message);
-        setUsername('');
-        setMessage('');
+        setForm({
+            username: '',
+            message: ''
+        });
+        // setUsername('');
+        // setMessage('');
     };
     const onKeyPress = e => {
         if(e.key === 'Enter') {
@@ -24,12 +41,12 @@ const EventPractice = () => {
         name="username" 
         placeholder="username" 
         value={username} 
-        onChange={onChangeUsername}></input>
+        onChange={onChange}></input>
         <input type="text" 
         name="message" 
         placeholder="message" 
         value={message} 
-        onChange={onChangeMessage} 
+        onChange={onChange} 
         onKeyPress={onKeyPress}></input>
         <button onClick={onClick}>submit</button>
     </div>
