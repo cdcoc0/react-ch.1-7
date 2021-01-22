@@ -29,6 +29,7 @@ class ValidationSample extends Component {
                 value={this.state.password} 
                 onChange={this.handleChange} 
                 className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}></input>
+                <input ref={(ref) => {this.kiri = ref}}></input>
                 <button onClick={this.handleButtonClick}>검증하기</button>
             </div>
         );
