@@ -19,23 +19,18 @@ class ValidationSample extends Component {
         this.setState({
             clicked: true,
             validated: this.state.password === '0000'
-        })
-    }
-
-    input = React.createRef();
-
-    handleFocus = () => {
-        this.input.current.focus();
+        });
+        this.input.focus();
     }
 
     render() {
         return(
             <div>
-                <input type="password"
+                <input type="password" 
+                ref={(ref) => this.input = ref}
                 value={this.state.password} 
                 onChange={this.handleChange} 
                 className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}></input>
-                <input ref={this.input}></input>
                 <button onClick={this.handleButtonClick}>검증하기</button>
             </div>
         );
