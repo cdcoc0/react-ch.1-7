@@ -32,9 +32,10 @@ class ValidationSample extends Component {
                 onChange={this.handleChange} 
                 className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}></input>
                 <button onClick={this.handleButtonClick}>검증하기</button>
+                <hr></hr>
             </div>
         );
     }
 }
 
-export default ValidationSample
+export default ValidationSample;

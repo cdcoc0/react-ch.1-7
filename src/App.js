@@ -4,12 +4,16 @@ import './App.css';
 // import Counter from './Counter';
 // import Say from './Say';
 // import EventPractice from './EventPractice';
-import ValidationSample from './ValidationSample'
+import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
     return (
+      <div>
         <ValidationSample />
+        <ScrollBox />
+      </div>
     );
   }
 }
