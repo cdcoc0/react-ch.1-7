@@ -49,6 +49,7 @@ const EventPractice = () => {
         onChange={onChange} 
         onKeyPress={onKeyPress}></input>
         <button onClick={onClick}>submit</button>
+        <hr></hr>
     </div>
     );
 }

@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import MyComponent from './MyComponent';
-import Counter from './Counter';
-import Say from './Say';
-import EventPractice from './EventPractice';
+// import MyComponent from './MyComponent';
+// import Counter from './Counter';
+// import Say from './Say';
+// import EventPractice from './EventPractice';
+import ValidationSample from './ValidationSample'
 
 const App = () => {
   return (
     <div>
-      <MyComponent name="React" favoriteNumber={1}>리액트</MyComponent>
+      {/* <MyComponent name="React" favoriteNumber={1}>리액트</MyComponent>
       <Counter />
       <Say />
-      <EventPractice />
+      <EventPractice /> */}
+      <ValidationSample />
     </div>
   );
 };
