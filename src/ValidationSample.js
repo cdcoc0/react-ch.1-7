@@ -22,6 +22,12 @@ class ValidationSample extends Component {
         })
     }
 
+    input = React.createRef();
+
+    handleFocus = () => {
+        this.input.current.focus();
+    }
+
     render() {
         return(
             <div>
@@ -29,7 +35,7 @@ class ValidationSample extends Component {
                 value={this.state.password} 
                 onChange={this.handleChange} 
                 className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}></input>
-                <input ref={(ref) => {this.kiri = ref}}></input>
+                <input ref={this.input}></input>
                 <button onClick={this.handleButtonClick}>검증하기</button>
             </div>
         );
