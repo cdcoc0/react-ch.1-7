@@ -41,6 +41,7 @@ const IterationSample = () => {
             <ul>
                 {nameList}
             </ul>
+            <hr></hr>
         </>
     );
 }
